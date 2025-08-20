@@ -16,40 +16,58 @@ A new CLI generated with oclif
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g custom-cli
-$ custom-cli COMMAND
+$ npm install -g poc-cli-1
+$ custom-cliff COMMAND
 running command...
-$ custom-cli (--version)
-custom-cli/0.0.0 win32-x64 node-v22.18.0
-$ custom-cli --help [COMMAND]
+$ custom-cliff (--version)
+poc-cli-1/1.0.2 win32-x64 node-v22.18.0
+$ custom-cliff --help [COMMAND]
 USAGE
-  $ custom-cli COMMAND
+  $ custom-cliff COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`custom-cli hello PERSON`](#custom-cli-hello-person)
-* [`custom-cli hello world`](#custom-cli-hello-world)
-* [`custom-cli help [COMMAND]`](#custom-cli-help-command)
-* [`custom-cli plugins`](#custom-cli-plugins)
-* [`custom-cli plugins add PLUGIN`](#custom-cli-plugins-add-plugin)
-* [`custom-cli plugins:inspect PLUGIN...`](#custom-cli-pluginsinspect-plugin)
-* [`custom-cli plugins install PLUGIN`](#custom-cli-plugins-install-plugin)
-* [`custom-cli plugins link PATH`](#custom-cli-plugins-link-path)
-* [`custom-cli plugins remove [PLUGIN]`](#custom-cli-plugins-remove-plugin)
-* [`custom-cli plugins reset`](#custom-cli-plugins-reset)
-* [`custom-cli plugins uninstall [PLUGIN]`](#custom-cli-plugins-uninstall-plugin)
-* [`custom-cli plugins unlink [PLUGIN]`](#custom-cli-plugins-unlink-plugin)
-* [`custom-cli plugins update`](#custom-cli-plugins-update)
+* [`custom-cliff goodbye PERSON`](#custom-cliff-goodbye-person)
+* [`custom-cliff hello PERSON`](#custom-cliff-hello-person)
+* [`custom-cliff hello world`](#custom-cliff-hello-world)
+* [`custom-cliff help [COMMAND]`](#custom-cliff-help-command)
+* [`custom-cliff plugins`](#custom-cliff-plugins)
+* [`custom-cliff plugins add PLUGIN`](#custom-cliff-plugins-add-plugin)
+* [`custom-cliff plugins:inspect PLUGIN...`](#custom-cliff-pluginsinspect-plugin)
+* [`custom-cliff plugins install PLUGIN`](#custom-cliff-plugins-install-plugin)
+* [`custom-cliff plugins link PATH`](#custom-cliff-plugins-link-path)
+* [`custom-cliff plugins remove [PLUGIN]`](#custom-cliff-plugins-remove-plugin)
+* [`custom-cliff plugins reset`](#custom-cliff-plugins-reset)
+* [`custom-cliff plugins uninstall [PLUGIN]`](#custom-cliff-plugins-uninstall-plugin)
+* [`custom-cliff plugins unlink [PLUGIN]`](#custom-cliff-plugins-unlink-plugin)
+* [`custom-cliff plugins update`](#custom-cliff-plugins-update)
 
-## `custom-cli hello PERSON`
+## `custom-cliff goodbye PERSON`
+
+Says goodbye to someone
+
+```
+USAGE
+  $ custom-cliff goodbye PERSON
+
+ARGUMENTS
+  PERSON  Person to say goodbye to
+
+DESCRIPTION
+  Says goodbye to someone
+```
+
+_See code: [src/commands/goodbye/index.ts](https://github.com/tomoriDev/poc-cli/https://github.com/tomoriDev/poc-cli/blob/v1.0.2/src/commands/goodbye/index.ts)_
+
+## `custom-cliff hello PERSON`
 
 Say hello
 
 ```
 USAGE
-  $ custom-cli hello PERSON -f <value>
+  $ custom-cliff hello PERSON -f <value>
 
 ARGUMENTS
   PERSON  Person to say hello to
@@ -61,37 +79,37 @@ DESCRIPTION
   Say hello
 
 EXAMPLES
-  $ custom-cli hello friend --from oclif
+  $ custom-cliff hello friend --from oclif
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [src/commands/hello/index.ts](https://github.com/tomoriDev/poc-cli/https://github.com/tomoriDev/poc-cli/blob/v0.0.0/src/commands/hello/index.ts)_
+_See code: [src/commands/hello/index.ts](https://github.com/tomoriDev/poc-cli/https://github.com/tomoriDev/poc-cli/blob/v1.0.2/src/commands/hello/index.ts)_
 
-## `custom-cli hello world`
+## `custom-cliff hello world`
 
 Say hello world
 
 ```
 USAGE
-  $ custom-cli hello world
+  $ custom-cliff hello world
 
 DESCRIPTION
   Say hello world
 
 EXAMPLES
-  $ custom-cli hello world
+  $ custom-cliff hello world
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [src/commands/hello/world.ts](https://github.com/tomoriDev/poc-cli/https://github.com/tomoriDev/poc-cli/blob/v0.0.0/src/commands/hello/world.ts)_
+_See code: [src/commands/hello/world.ts](https://github.com/tomoriDev/poc-cli/https://github.com/tomoriDev/poc-cli/blob/v1.0.2/src/commands/hello/world.ts)_
 
-## `custom-cli help [COMMAND]`
+## `custom-cliff help [COMMAND]`
 
-Display help for custom-cli.
+Display help for custom-cliff.
 
 ```
 USAGE
-  $ custom-cli help [COMMAND...] [-n]
+  $ custom-cliff help [COMMAND...] [-n]
 
 ARGUMENTS
   COMMAND...  Command to show help for.
@@ -100,18 +118,18 @@ FLAGS
   -n, --nested-commands  Include all nested commands in the output.
 
 DESCRIPTION
-  Display help for custom-cli.
+  Display help for custom-cliff.
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.32/src/commands/help.ts)_
 
-## `custom-cli plugins`
+## `custom-cliff plugins`
 
 List installed plugins.
 
 ```
 USAGE
-  $ custom-cli plugins [--json] [--core]
+  $ custom-cliff plugins [--json] [--core]
 
 FLAGS
   --core  Show core plugins.
@@ -123,18 +141,18 @@ DESCRIPTION
   List installed plugins.
 
 EXAMPLES
-  $ custom-cli plugins
+  $ custom-cliff plugins
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.46/src/commands/plugins/index.ts)_
 
-## `custom-cli plugins add PLUGIN`
+## `custom-cliff plugins add PLUGIN`
 
-Installs a plugin into custom-cli.
+Installs a plugin into custom-cliff.
 
 ```
 USAGE
-  $ custom-cli plugins add PLUGIN... [--json] [-f] [-h] [-s | -v]
+  $ custom-cliff plugins add PLUGIN... [--json] [-f] [-h] [-s | -v]
 
 ARGUMENTS
   PLUGIN...  Plugin to install.
@@ -149,39 +167,39 @@ GLOBAL FLAGS
   --json  Format output as json.
 
 DESCRIPTION
-  Installs a plugin into custom-cli.
+  Installs a plugin into custom-cliff.
 
   Uses npm to install plugins.
 
   Installation of a user-installed plugin will override a core plugin.
 
-  Use the CUSTOM_CLI_NPM_LOG_LEVEL environment variable to set the npm loglevel.
-  Use the CUSTOM_CLI_NPM_REGISTRY environment variable to set the npm registry.
+  Use the CUSTOM_CLIFF_NPM_LOG_LEVEL environment variable to set the npm loglevel.
+  Use the CUSTOM_CLIFF_NPM_REGISTRY environment variable to set the npm registry.
 
 ALIASES
-  $ custom-cli plugins add
+  $ custom-cliff plugins add
 
 EXAMPLES
   Install a plugin from npm registry.
 
-    $ custom-cli plugins add myplugin
+    $ custom-cliff plugins add myplugin
 
   Install a plugin from a github url.
 
-    $ custom-cli plugins add https://github.com/someuser/someplugin
+    $ custom-cliff plugins add https://github.com/someuser/someplugin
 
   Install a plugin from a github slug.
 
-    $ custom-cli plugins add someuser/someplugin
+    $ custom-cliff plugins add someuser/someplugin
 ```
 
-## `custom-cli plugins:inspect PLUGIN...`
+## `custom-cliff plugins:inspect PLUGIN...`
 
 Displays installation properties of a plugin.
 
 ```
 USAGE
-  $ custom-cli plugins inspect PLUGIN...
+  $ custom-cliff plugins inspect PLUGIN...
 
 ARGUMENTS
   PLUGIN...  [default: .] Plugin to inspect.
@@ -197,18 +215,18 @@ DESCRIPTION
   Displays installation properties of a plugin.
 
 EXAMPLES
-  $ custom-cli plugins inspect myplugin
+  $ custom-cliff plugins inspect myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.46/src/commands/plugins/inspect.ts)_
 
-## `custom-cli plugins install PLUGIN`
+## `custom-cliff plugins install PLUGIN`
 
-Installs a plugin into custom-cli.
+Installs a plugin into custom-cliff.
 
 ```
 USAGE
-  $ custom-cli plugins install PLUGIN... [--json] [-f] [-h] [-s | -v]
+  $ custom-cliff plugins install PLUGIN... [--json] [-f] [-h] [-s | -v]
 
 ARGUMENTS
   PLUGIN...  Plugin to install.
@@ -223,41 +241,41 @@ GLOBAL FLAGS
   --json  Format output as json.
 
 DESCRIPTION
-  Installs a plugin into custom-cli.
+  Installs a plugin into custom-cliff.
 
   Uses npm to install plugins.
 
   Installation of a user-installed plugin will override a core plugin.
 
-  Use the CUSTOM_CLI_NPM_LOG_LEVEL environment variable to set the npm loglevel.
-  Use the CUSTOM_CLI_NPM_REGISTRY environment variable to set the npm registry.
+  Use the CUSTOM_CLIFF_NPM_LOG_LEVEL environment variable to set the npm loglevel.
+  Use the CUSTOM_CLIFF_NPM_REGISTRY environment variable to set the npm registry.
 
 ALIASES
-  $ custom-cli plugins add
+  $ custom-cliff plugins add
 
 EXAMPLES
   Install a plugin from npm registry.
 
-    $ custom-cli plugins install myplugin
+    $ custom-cliff plugins install myplugin
 
   Install a plugin from a github url.
 
-    $ custom-cli plugins install https://github.com/someuser/someplugin
+    $ custom-cliff plugins install https://github.com/someuser/someplugin
 
   Install a plugin from a github slug.
 
-    $ custom-cli plugins install someuser/someplugin
+    $ custom-cliff plugins install someuser/someplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.46/src/commands/plugins/install.ts)_
 
-## `custom-cli plugins link PATH`
+## `custom-cliff plugins link PATH`
 
 Links a plugin into the CLI for development.
 
 ```
 USAGE
-  $ custom-cli plugins link PATH [-h] [--install] [-v]
+  $ custom-cliff plugins link PATH [-h] [--install] [-v]
 
 ARGUMENTS
   PATH  [default: .] path to plugin
@@ -277,18 +295,18 @@ DESCRIPTION
 
 
 EXAMPLES
-  $ custom-cli plugins link myplugin
+  $ custom-cliff plugins link myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.46/src/commands/plugins/link.ts)_
 
-## `custom-cli plugins remove [PLUGIN]`
+## `custom-cliff plugins remove [PLUGIN]`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ custom-cli plugins remove [PLUGIN...] [-h] [-v]
+  $ custom-cliff plugins remove [PLUGIN...] [-h] [-v]
 
 ARGUMENTS
   PLUGIN...  plugin to uninstall
@@ -301,20 +319,20 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ custom-cli plugins unlink
-  $ custom-cli plugins remove
+  $ custom-cliff plugins unlink
+  $ custom-cliff plugins remove
 
 EXAMPLES
-  $ custom-cli plugins remove myplugin
+  $ custom-cliff plugins remove myplugin
 ```
 
-## `custom-cli plugins reset`
+## `custom-cliff plugins reset`
 
 Remove all user-installed and linked plugins.
 
 ```
 USAGE
-  $ custom-cli plugins reset [--hard] [--reinstall]
+  $ custom-cliff plugins reset [--hard] [--reinstall]
 
 FLAGS
   --hard       Delete node_modules and package manager related files in addition to uninstalling plugins.
@@ -323,13 +341,13 @@ FLAGS
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.46/src/commands/plugins/reset.ts)_
 
-## `custom-cli plugins uninstall [PLUGIN]`
+## `custom-cliff plugins uninstall [PLUGIN]`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ custom-cli plugins uninstall [PLUGIN...] [-h] [-v]
+  $ custom-cliff plugins uninstall [PLUGIN...] [-h] [-v]
 
 ARGUMENTS
   PLUGIN...  plugin to uninstall
@@ -342,22 +360,22 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ custom-cli plugins unlink
-  $ custom-cli plugins remove
+  $ custom-cliff plugins unlink
+  $ custom-cliff plugins remove
 
 EXAMPLES
-  $ custom-cli plugins uninstall myplugin
+  $ custom-cliff plugins uninstall myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.46/src/commands/plugins/uninstall.ts)_
 
-## `custom-cli plugins unlink [PLUGIN]`
+## `custom-cliff plugins unlink [PLUGIN]`
 
 Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ custom-cli plugins unlink [PLUGIN...] [-h] [-v]
+  $ custom-cliff plugins unlink [PLUGIN...] [-h] [-v]
 
 ARGUMENTS
   PLUGIN...  plugin to uninstall
@@ -370,20 +388,20 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ custom-cli plugins unlink
-  $ custom-cli plugins remove
+  $ custom-cliff plugins unlink
+  $ custom-cliff plugins remove
 
 EXAMPLES
-  $ custom-cli plugins unlink myplugin
+  $ custom-cliff plugins unlink myplugin
 ```
 
-## `custom-cli plugins update`
+## `custom-cliff plugins update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ custom-cli plugins update [-h] [-v]
+  $ custom-cliff plugins update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.

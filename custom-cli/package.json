@@ -1,7 +1,7 @@
 {
   "name": "custom-cli",
   "description": "A new CLI generated with oclif",
-  "version": "0.0.0",
+  "version": "1.0.3",
   "author": "Carlos Torres",
   "bin": {
     "custom-cli": "./bin/run.js"
