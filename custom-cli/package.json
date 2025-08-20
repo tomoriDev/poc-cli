@@ -1,7 +1,7 @@
 {
-  "name": "custom-cli",
+  "name": "poc-cli-1",
   "description": "A new CLI generated with oclif",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Carlos Torres",
   "bin": {
     "custom-cli": "./bin/run.js"
