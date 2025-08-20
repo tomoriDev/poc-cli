@@ -1,16 +1,17 @@
 {
-  "name": "poc-cli-1",
+  "name": "plugin-scaffold",
   "description": "A new CLI generated with oclif",
-  "version": "1.0.8",
+  "version": "0.0.0",
   "author": "Carlos Torres",
   "bin": {
-    "custom-cli": "./bin/run.js"
+    "plugin-scaffold": "./bin/run.js"
   },
-  "bugs": "https://github.com/https://github.com/tomoriDev/poc-cli/https://github.com/tomoriDev/poc-cli/issues",
+  "bugs": "https://github.com/fem-workspace/plugin-scaffold/issues",
   "dependencies": {
     "@oclif/core": "^4",
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^5",
+    "fs-extra": "^11.3.1",
     "inquirer": "^12.9.3"
   },
   "devDependencies": {
@@ -18,6 +19,7 @@
     "@oclif/prettier-config": "^0.2.1",
     "@oclif/test": "^4",
     "@types/chai": "^4",
+    "@types/fs-extra": "^11.0.4",
     "@types/inquirer": "^9.0.9",
     "@types/mocha": "^10",
     "@types/node": "^18",
@@ -37,9 +39,10 @@
   "files": [
     "./bin",
     "./dist",
-    "./oclif.manifest.json"
+    "./oclif.manifest.json",
+    "./templates"
   ],
-  "homepage": "https://github.com/https://github.com/tomoriDev/poc-cli/https://github.com/tomoriDev/poc-cli",
+  "homepage": "https://github.com/fem-workspace/plugin-scaffold",
   "keywords": [
     "oclif"
   ],
@@ -47,8 +50,8 @@
   "main": "dist/index.js",
   "type": "module",
   "oclif": {
-    "bin": "custom-cli",
-    "dirname": "custom-cli",
+    "bin": "plugin-scaffold",
+    "dirname": "plugin-scaffold",
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help",
@@ -61,7 +64,7 @@
       }
     }
   },
-  "repository": "https://github.com/tomoriDev/poc-cli/https://github.com/tomoriDev/poc-cli",
+  "repository": "fem-workspace/plugin-scaffold",
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint",
